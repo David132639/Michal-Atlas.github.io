@@ -18,13 +18,14 @@
     let minuteRay = ['0', '1', '2', '3', '4', '5', '6', '7', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'Θ', 'P', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z',
         '.0', '.1', '.2', '.3', '.4', '.5', '.6', '.7', '.7', '.8', '.9', '.A', '.B', '.C', '.D', '.E', '.F', '.G', '.H', '.I', '.K', '.L', '.M', '.N', '.Θ', '.P', '.R', '.S', '.T', '.U', '.V', '.X', '.Y', '.Z'
     ];
+    let unifiedRay = ['0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'Θ', 'P', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.0' '.A', '.B', '.C', '.D', '.E', '.F', '.G', '.H', '.I', '.K', '.L', '.M', '.N', '.Θ', '.P', '.R', '.S', '.T', '.U', '.V', '.X', '.Y', '.Z', '.1', '.2', '.3', '.4', '.5', '.6', '.7', '.8', '.9']
     var t = setInterval(UpdateTime, 1000);
 
     function UpdateTime() {
         let time = new Date();
-        document.getElementById("hourSpan").innerHTML = hourRay[time.getHours()];
-        document.getElementById("minuteSpan").innerHTML = minuteRay[time.getMinutes()];
-        document.getElementById("secondSpan").innerHTML = minuteRay[time.getSeconds()];
+        document.getElementById("hourSpan").innerHTML = unifiedRay[time.getHours()];
+        document.getElementById("minuteSpan").innerHTML = unifiedRay[time.getMinutes()];
+        document.getElementById("secondSpan").innerHTML = unifiedRay[time.getSeconds()];
     }
 </script>
 <style>
